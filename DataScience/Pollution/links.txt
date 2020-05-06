@@ -1,0 +1,9 @@
+pollution source data:
+http://powietrze.gios.gov.pl/pjp/archives
+
+weather source data:
+https://dane.imgw.pl/data/dane_pomiarowo_obserwacyjne/dane_meteorologiczne/terminowe/synop/
+(Wroclaw station code: 424)
+
+
+

@@ -1,0 +1,165 @@
+%!TEX TS-program = xelatex
+% \def\print{}
+\documentclass[tikz]{friggeri-cv}
+\usepackage{afterpage}
+\usepackage{hyperref}
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage{graphicx}
+
+
+\hypersetup{
+    pdftitle={},
+    pdfauthor={},
+    pdfsubject={},
+    pdfkeywords={},
+    colorlinks=false,       % no link border color
+   allbordercolors=white    % white border color for all
+}
+
+\newcommand{\circleBoxCoding}{
+  \resizebox{.8\linewidth}{!}{
+  \begin{tikzpicture}[font=\sffamily\bfseries\large,text=white,]
+    \foreach \angle/\col [remember=\angle as \last (initially 0)] in 
+        {100/darkgray, 200/pblue, 240/orange, 280/purple, 320/red, 360/green}{
+        \draw[\col, line width=55] (\last:2cm) arc[start angle=\last, end angle=\angle, radius=2cm];
+        \draw[white, line width=1mm] (\last:0.9)--++(\last:2.3);
+    }
+    % \node[line width=1mm, draw, circle, minimum width=2.5cm, white, fill=purple!80] {C/C++};
+    \node at (50:2cm) {Python};
+    \node at (150:2cm) {C++};
+    \node at (220:2cm) {Java};
+    \node at (260:2cm) {Go};
+    \node at (300:2cm) {Julia};
+    \node at (340:2cm) {Prolog};
+  \end{tikzpicture}
+  }
+}
+
+
+\begin{document}
+\header{Tomasz}{Kulik}{}
+ %Fake text to add separator
+\fcolorbox{white}{gray}{\parbox{\dimexpr\textwidth-2\fboxsep-2\fboxrule}{.....}}
+
+% In the aside, each new line forces a line break
+\begin{aside}
+  \includegraphics[width=0.7\textwidth]{me}
+    ~
+  \textbf{Birthdate:} 02-06-1994
+  \textbf{Phone:} +48 660 718 720
+  \href{mailto:}{\textbf{tomek.kulik2@}gmail.com}
+  \href{https://linkedin.com/in/tomkulik}{\textbf{linkedin.com}/in/tomkulik}
+  \href{https://github.com/kulikthebird}{\textbf{github.com}/kulikthebird}
+    ~
+  \section{Programming}
+    \circleBoxCoding
+  \section{Tools}
+    ~
+    \fbox{Git} \fbox{SVN} \fbox{CMake} \fbox{GMock} \fbox{GTest} \fbox{PyTest} \fbox{Pylint} \fbox{Gitlab} \fbox{Jenkins} \fbox{Jira} \fbox{Fisheye} \fbox{Bison} \fbox{Flex} \fbox{CPLEX} \fbox{Scikit-learn} \fbox{Keras} \fbox{Pandas} \fbox{Matplotlib} \fbox{OpenGL} \fbox{Linux (bash)} \fbox{Windows}
+    ~
+  \section{Personal Skills}
+    Team player
+    Fast learner
+    Sharing knowledge
+    ~
+  \section{Languages}
+    \textbf{Polish} - Native
+    \textbf{English} - Good
+    ~
+  \section{Interested in}
+    Algorithmics
+    Machine learning
+    Dancing
+    Sport
+    Guitar
+\end{aside}
+
+\section{About me}
+\small
+{
+I have almost 5 years of professional experience in IT, 3 years as a Automation Tester and 2 years as a Software Engineer.
+I started as a Working Student in Nokia during a 2nd year of study. I gained a lot of knowledge of Telco industry and
+Software project Life Cycle. I had a chance to work on both a very large projects with thousands lines of code
+and smaller applications written from scratch. I'm using SOLID principles, well known design patterns and unit testing in my daily basis.
+My studies were focused mainly on theory of Computer Science, however there were a lot of practical exercises. I was using a number of
+programming languages during labs. I learned a lot of algorithms from different fields such as networking, distributed systems,
+coding and compression of data, parsing and compilers' architecture, machine learning, optimization etc.
+}
+
+\section{Experience}
+\begin{entrylist}
+  \entry
+    {08/18 - present}
+    {Engineer Software Development}
+    {Nokia, Wrocław, Poland}
+    {
+      \vspace{-3mm}
+      \begin{itemize}
+        \setlength\itemsep{0.2em}
+        \item Development of LTE and IoT software in System Module and Radio Module
+        \item Implementing new features and maintaining legacy code
+        \item Faults analysis
+        \item Python3 and C++14 code reviewer, member of a Scrum team
+        \item Programming: C++14, Python3, TTCN-3, VBA
+      \end{itemize}
+    }
+  \entry
+    {06/15 - 08/18}
+    {Software Test Engineer}
+    {Nokia, Wrocław, Poland}
+    {
+      \vspace{-3mm}
+      \begin{itemize}
+        \setlength\itemsep{0.2em}
+        \item Functional Testing, Integration Testing
+        \item Development of a test environment for LTE software (Base station)
+        \item Creating automated tests, preparing documentation of test plans etc.
+        \item Python3 code reviewer, member of a Scrum team
+        \item Programming: Python3, RobotFramework
+      \end{itemize}
+    }
+\end{entrylist}
+
+\section{Education}
+\begin{entrylist}
+  \entry
+    {2017 - 2019}
+    {Master's Degree in Computer Science (Algorithmics)}
+    {Wrocław University of Science and Technology}
+    {
+      \emph{Faculty:} Fundamental Problems of Technology \\
+      \emph{Thesis: ,,Filtering algorithms in constraints programming''.} \\
+      \emph{Description and implementation of algorithms for domains reduction
+            (constraints propagation) within IBM CPLEX environment. \textbf{C++11 / Optimization} }
+    }
+  \entry
+    {2013 - 2017}
+    {Bachelor's Degree in Computer Science}
+    {Wrocław University of Science and Technology}
+    {
+      \emph{Faculty:} Fundamental Problems of Technology \\
+      \emph{Thesis: ,,Computer modeling and solving geometry puzzles that require collision detection''.} \\
+      \emph{Solver of 'Snake cube puzzle'. Application consist of an interactive 3D GUI that allows the user
+            to manipulate the model and to solve it step by step. \textbf{C++11 / OpenGL} }
+    }
+\end{entrylist}
+
+\section{Certifications}
+\begin{itemize}
+  \setlength\itemsep{-0.32em}
+  \item {\small Best practices of object-oriented programming in C++ language}
+  \item {\small ISTQB Certified Tester Foundation Level}
+  \item {\small E-UTRAN/LTE Signalling}
+  \item {\small LTE Cellular IoT}
+\end{itemize}
+
+\vspace{5mm}
+{\scriptsize I agree to the processing of personal data provided in this document for realising
+the recruitment process pursuant to the Personal Data Protection Act of 10 May 2018 (Journal of
+Laws 2018, item 1000) and in agreement with Regulation (EU) 2016/679 of the European Parliament
+and of the Council of 27 April 2016 on the protection of natural persons with regard to the
+processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC
+(General Data Protection Regulation).}
+
+\end{document}
