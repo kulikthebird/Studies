@@ -1,5 +1,5 @@
 compile:
-	xelatex Tomasz_Kulik.tex ; xelatex Tomasz_Kulik.tex
+	xelatex Tomasz_Kulik.tex
 
 show:
 	evince Tomasz_Kulik.pdf
