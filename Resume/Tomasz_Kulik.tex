@@ -4,7 +4,7 @@
 %%%%%%%%%%%
 % General %
 %%%%%%%%%%%
-\documentclass[A4,9pt]{article}
+\documentclass[A4,11pt]{article}
 \NeedsTeXFormat{LaTeX2e}
 \ProcessOptions\relax
 \RequirePackage[left=1.5cm,top=1.5cm,right=1.5cm,bottom=1cm,nohead,nofoot]{geometry}
@@ -88,9 +88,9 @@ BoldItalicFont=texgyreheros-bolditalic.otf]
 \pagestyle{empty}
 
 
-%%%%%%%%%%%%%%%%%%%%
-% List environment %
-%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%
+% Section   %
+%%%%%%%%%%%%%
 \setlength{\tabcolsep}{0pt}
 \newenvironment{entrylist}{%
   \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ll}
@@ -100,7 +100,7 @@ BoldItalicFont=texgyreheros-bolditalic.otf]
 \renewcommand{\bfseries}{\headingfont\color{headercolor}}
 \newcommand{\entry}[4]{
 {
-  \footnotesize #1}&\parbox[t]{16.4cm}{
+  \footnotesize #1}&\parbox[t]{16.0cm}{
     \textbf{#2} \\
     {\footnotesize\addfontfeature{Color=pblue} #3} \\
     {\footnotesize #4}\vspace{\parsep}
@@ -137,7 +137,7 @@ BoldItalicFont=texgyreheros-bolditalic.otf]
 \begin{minipage}[c]{0.2\textwidth}
   \begin{tikzpicture}
     \clip (0,0) circle (1.75cm);
-    \node at (0.17, 0.0) {\includegraphics[width = 4.3cm]{photo}};    % (x, y) and width=zoom
+    \node at (0.0, -0.7) {\includegraphics[width = 3.6cm]{diploma2}};    % (x, y) and width=zoom
   \end{tikzpicture}
   \hfill\vline\hfill
 \end{minipage}
@@ -155,41 +155,28 @@ BoldItalicFont=texgyreheros-bolditalic.otf]
 \fcolorbox{white}{gray}{\parbox{\dimexpr\textwidth-2\fboxsep-2\fboxrule}{.....}}
 
 
-\section{About me}
-\small
-{
-  % Info about systemd, linux etc. in nokia related part
-  % More details about the work done in nokia (automation test / developer)
-  % more info about code review and updating the process
-  % Add some general information about what I am doing here in lxft
-  % I have started as a Working Student in Nokia by the end of a 2nd year of studies. I was part of Q&A team that worked on
-  % tests for base station. I had a chance to work on both a very large projects with thousands lines of code
-  % and smaller applications written from scratch. I'm using SOLID principles, well known design patterns and unit testing in my daily basis.
-  % My studies were focused mainly on theory of Computer Science, however there were a lot of practical exercises. I was using a number of
-  % programming languages during labs. I learned a lot of algorithms from different fields such as networking, distributed systems,
-  % coding and compression of data, parsing and compilers' architecture, machine learning, optimization etc.
-  Some text here TODO.
-}
-
-
 \section{Experience}
+\vspace{0.2cm}
 \begin{entrylist}
   \entry
-  {06/20 - present}
+  {Jun/20 - }
   {Software Developer}
   {Luxoft (Metaswitch), Wrocław, Poland}
   {
+    Some text here
     \begin{itemize}
       \setlength\itemsep{0.2em}
-      \item Development of 5G core software.
-      \item Implementing new features and maintaining legacy code
-      \item Faults analysis
-      \item Python3 and C++14 code reviewer, member of a Scrum team
-      \item Programming: C++14, Python3, TTCN-3, VBA
+      \item Developing the 5G core software
+      \item Implementing mainly new features
+      \item Preparing the documentation and specification of the new features
+      \item Working on microservices in a cloud environment (\textbf{Azure})
+      \item Testing new features
+      \item Working with \textbf{Docker}, \textbf{Kubernetes}
+      \item Programming: \textbf{Rust}, \textbf{Python3}
     \end{itemize}
   }
   \entry
-  {08/18 - 06/20}
+  {Aug/18 - Jun/20}
   {Engineer Software Developer}
   {Nokia, Wrocław, Poland}
   {
@@ -200,37 +187,49 @@ BoldItalicFont=texgyreheros-bolditalic.otf]
     also other projects written mainly in Python in which I took part.
     \begin{itemize}
       \setlength\itemsep{0.2em}
-      \item Development of LTE and IoT software in System Module and Radio Module
+      \item Developing of \textbf{LTE} and \textbf{IoT} software in eNodeB
+      \item Developing middleware for Radio Module (\textbf{init}, \textbf{systemd})
       \item Implementing new features and maintaining legacy code
-      \item Faults analysis
-      \item Python3 and C++14 code reviewer, member of a Scrum team
-      \item Programming: C++14, Python3, TTCN-3, VBA
+      \item Bug fixing, fault analysis
+      \item Python3 and C++14 code reviewer
+      \item Member of a \textbf{scrum team}
+      \item Programming: \textbf{C++14}, \textbf{Python3}, \textbf{TTCN-3}, \textbf{VBA}
     \end{itemize}
   }
   \entry
-  {06/15 - 08/18}
+  {Jun/15 - Aug/18}
   {Software Test Engineer}
   {Nokia, Wrocław, Poland}
   {
     I have started as a Working Student in Nokia by the end of a 2nd year of studies.
-    I was part of Q team that worked on tests for base station. After few months I
+    I was part of Q\&A team that worked on tests for base station. After few months I
     switched to the full time job and became a Test Engineer. To get a wider view of
     the project I took part in the review process as a code reviewer. The job gave
     me a chance of working close to the 'bear metal' and simultaneously to learn
     good practices in programming. 
     \begin{itemize}
       \setlength\itemsep{0.2em}
+      \item Writing \textbf{automated tests}, preparing documentation of test plans
       \item Functional Testing, Integration Testing
-      \item Working on a test environment for LTE software (Base station)
-      \item Writing automated tests, preparing documentation of test plans
-      \item Python3 code reviewer, member of a Scrum team
-      \item Programming: Python3, RobotFramework
+      \item Working on a test environment for \textbf{LTE software} U-plane and C-plane in eNodeB
+      \item Python3 code review and co-author of ,,test guide''
+      \item Member of a \textbf{scrum team}
+      \item Programming: \textbf{Python3}, \textbf{RobotFramework}, \textbf{Bash}
     \end{itemize}
   }
 \end{entrylist}
 
+\newpage
 
 \section{Education}
+\vspace{0.1cm}
+{\footnotesize
+My studies were focused mainly on a theory of Computer Science, though there were also practical exercises.
+I was using a number of programming languages during labs. I learned about algorithms used in various
+fields such as networking, distributed systems, coding and compression of data, compilers, machine learning,
+optimization and so forth.
+}
+
 \begin{entrylist}
   \entry
   {2017 - 2019}
@@ -269,11 +268,11 @@ BoldItalicFont=texgyreheros-bolditalic.otf]
 \begin{itemize}
   \setlength\itemsep{-0.32em}
   \item \textbf{Cloud/DevOps:} Azure, Docker, Jenkins, Kubernetes
-  \item \textbf{Programming:} Bison, Cmake, Cplex, GTest, OpenGL, PyTest
+  \item \textbf{Programming:} Bison, Cplex, GTest, OpenGL, PyTest
   \item \textbf{Codebase and CI:} Fisheye, Gerrit, Git, Gitlab, Jenkins, Svn
   \item \textbf{Machine Learning:} Keras, Matplotlib, Pandas, Scikit-learn
-  \item \textbf{Operating Systems:} Linux, SystemD, Windows
-  \item \textbf{Misc:} Jira
+  \item \textbf{Operating Systems:} Linux, Windows
+  \item \textbf{Misc:} Jira, Confluence, etc.
 \end{itemize}
 
 
@@ -282,7 +281,7 @@ BoldItalicFont=texgyreheros-bolditalic.otf]
   \setlength\itemsep{-0.32em}
   \item \textbf{Languages:} Polish (Native), English (B2)
   \item \textbf{Programming:} C/C++ (Good), Python (Good), Rust (Intermediate),
-            Julia (Intermediate), Prolog (Intermediate), SQL (Basic)
+            Julia (Intermediate), Prolog (Basic), SQL (Basic)
   \item \textbf{Personal:} Team player, Fast learner, Sharing knowledge
 \end{itemize}
 
@@ -290,15 +289,13 @@ BoldItalicFont=texgyreheros-bolditalic.otf]
 \section{Interested in}
 \begin{itemize}
   \setlength\itemsep{-0.32em}
-  \item Dance and sport
-  \item Machine learning
-  \item Algorithmics
+  \item Dance and Sport in general (trecking, snowboard, workout, etc.)
+  \item Machine learning and Algorithmics
   \item Guitar
 \end{itemize}
 
 
-\vspace{5mm}
-{\scriptsize 
+{\tiny 
   I agree to the processing of personal data provided in this document for realising
   the recruitment process pursuant to the Personal Data Protection Act of 10 May 2018 (Journal of
   Laws 2018, item 1000) and in agreement with Regulation (EU) 2016/679 of the European Parliament
@@ -306,4 +303,5 @@ BoldItalicFont=texgyreheros-bolditalic.otf]
   processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC
   (General Data Protection Regulation).
 }
+
 \end{document}
